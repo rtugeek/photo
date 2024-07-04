@@ -1,0 +1,93 @@
+{
+  "name": "widgetjs.cn.photo",
+  "version": "0.4.0",
+  "author": "WidgetJS",
+  "homepage": "",
+  "title": {
+    "zh-CN": "相册组件包"
+  },
+  "description": {
+    "zh-CN": "相册组件包"
+  },
+  "entry": "/",
+  "remote": {
+    "hostname": "widgetjs.cn",
+    "entry": "https://widgetjs.cn/photo",
+    "base": "/photo"
+  },
+  "hash": true,
+  "url": "",
+  "widgets": [
+    {
+      "name": "widgetjs.cn.photo.sticker",
+      "title": {
+        "zh-CN": "大头贴"
+      },
+      "description": {
+        "zh-CN": "将照片贴在桌面上"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 3,
+      "height": 4,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 6,
+      "minWidth": 2,
+      "minHeight": 2,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/sticker",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_sticker.png",
+      "categories": [
+        "photo"
+      ],
+      "supportDeployMode": 17,
+      "configPagePath": "/widget/config/sticker?width=600&height=400frame=true&transparent=false",
+      "routes": []
+    },
+    {
+      "name": "widgetjs.cn.photo.photo",
+      "title": {
+        "zh-CN": "轮播相册"
+      },
+      "description": {
+        "zh-CN": "轮播文件夹内的图片"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 2,
+      "height": 2,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 6,
+      "minWidth": 1,
+      "minHeight": 1,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/photo",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_photo.png",
+      "categories": [
+        "photo"
+      ],
+      "supportDeployMode": 17,
+      "configPagePath": "/widget/config/photo?width=600&height=400frame=true&transparent=false",
+      "routes": []
+    }
+  ],
+  "pages": []
+}
