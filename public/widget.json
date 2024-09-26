@@ -4,10 +4,12 @@
   "author": "WidgetJS",
   "homepage": "",
   "title": {
-    "zh-CN": "相册组件包"
+    "zh-CN": "相册组件包",
+    "en-US": "Photo widget package"
   },
   "description": {
-    "zh-CN": "相册组件包"
+    "zh-CN": "在桌面展示您的精彩照片",
+    "en-US": "Show your wonderful photos on the desktop"
   },
   "entry": "/",
   "remote": {
@@ -21,10 +23,12 @@
     {
       "name": "widgetjs.cn.photo.sticker",
       "title": {
-        "zh-CN": "大头贴"
+        "zh-CN": "大头贴",
+        "en-US": "Sticker"
       },
       "description": {
-        "zh-CN": "将照片贴在桌面上"
+        "zh-CN": "将照片贴在桌面上",
+        "en-US": "Stick photos on the desktop"
       },
       "keywords": [
         "recommend"
@@ -56,10 +60,12 @@
     {
       "name": "widgetjs.cn.photo.photo",
       "title": {
-        "zh-CN": "轮播相册"
+        "zh-CN": "轮播相册",
+        "en-US": "Carousel Gallery"
       },
       "description": {
-        "zh-CN": "轮播文件夹内的图片"
+        "zh-CN": "轮播文件夹内的图片",
+        "en-US": "Carousel Images in the Folder"
       },
       "keywords": [
         "recommend"

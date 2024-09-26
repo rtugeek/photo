@@ -22,16 +22,8 @@ const {
 const photoConfig = useStorage(`photo-config-${widgetParams.id}`, new PhotoConfig())
 function reloadData() {
   if (photoConfig.value.directory) {
-    FileApi.readDirectory(photoConfig.value.directory, { ignoreDir: true, traverseDir: false }).then((rootFile) => {
-      const pathArr = rootFile.children?.filter((file) => {
-        const ignoreCase = file.absolutePath.toLowerCase()
-        return (
-          ignoreCase.endsWith('.jpg')
-          || ignoreCase.endsWith('.jpeg')
-          || ignoreCase.endsWith('.gif')
-          || ignoreCase.endsWith('.png')
-        )
-      }).map(file => file.absolutePath) ?? []
+    FileApi.readDirectory(photoConfig.value.directory, { ignoreDir: true, onlyFiles: true, deep: 1, pattern: '**/*.{jpg,jpeg,gif,png,webp}' }).then((rootFile) => {
+      const pathArr = rootFile.children?.map(file => file.absolutePath) ?? []
       photos.value = photoConfig.value.random ? shuffle(pathArr) : pathArr
     })
     showGuide.value = false

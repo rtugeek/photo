@@ -4,10 +4,6 @@ import {
 } from '@widget-js/core'
 
 const name = '.photo'
-// 组件标题
-const title = { 'zh-CN': '轮播相册' }
-// 组件描述
-const description = { 'zh-CN': '轮播文件夹内的图片' }
 // 组件关键词
 const keywords = [WidgetKeyword.RECOMMEND]
 // 组件路由地址
@@ -18,8 +14,8 @@ const PhotoWidget = new Widget({
   previewImage: '/images/preview_photo.png',
   path,
   name,
-  title,
-  description,
+  title: { 'zh-CN': '轮播相册', 'en-US': 'Carousel Gallery' },
+  description: { 'zh-CN': '轮播文件夹内的图片', 'en-US': 'Carousel Images in the Folder' },
   keywords,
   lang: 'zh-CN',
   width: 2,

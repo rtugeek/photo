@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useWidget } from '@widget-js/vue3'
+import { useWidget, useWidgetTheme } from '@widget-js/vue3'
 import { useStorage, useWindowSize } from '@vueuse/core'
 import { nextTick, onMounted, ref } from 'vue'
 import { AppConfig } from '@/common/AppConfig'
@@ -8,7 +8,11 @@ const { widgetParams } = useWidget()
 const url = useStorage(`image-${widgetParams.id}`, AppConfig.DEFAULT_IMAGE)
 const windowSize = useWindowSize()
 const imgRef = ref<HTMLImageElement>()
-
+useWidgetTheme({
+  defaultTheme: {
+    backgroundColor: 'transparent',
+  },
+})
 /**
  * 将一个矩形居中缩放到另一个矩形中
  * @param width
@@ -36,9 +40,7 @@ function reloadImageSize() {
   const img = imgRef.value
   if (img) {
     const { naturalWidth, naturalHeight } = img
-    const ratio = naturalWidth / naturalHeight
     const size = centerInsideRect(naturalWidth, naturalHeight, windowSize.width.value, windowSize.height.value)
-    console.log(size)
     img.style.width = `${size[0] - 64}px`
   }
 }
@@ -64,12 +66,16 @@ onMounted(async () => {
         <img ref="imgRef" :src="url">
       </div>
     </div>
+    <template #background>
+      <div />
+    </template>
   </widget-wrapper>
 </template>
 
 <style>
 *{
   user-select: none;
+  -webkit-user-drag: none;
 }
 
 .wrapper{

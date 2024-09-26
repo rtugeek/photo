@@ -2,8 +2,8 @@ import { Widget, WidgetKeyword } from '@widget-js/core'
 
 const StickerWidget = new Widget({
   name: '.sticker',
-  title: { 'zh-CN': '大头贴' },
-  description: { 'zh-CN': '将照片贴在桌面上' },
+  title: { 'zh-CN': '大头贴', 'en-US': 'Sticker' },
+  description: { 'zh-CN': '将照片贴在桌面上', 'en-US': 'Stick photos on the desktop' },
   keywords: [WidgetKeyword.RECOMMEND],
   lang: 'zh-CN',
   categories: ['photo'],
