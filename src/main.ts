@@ -1,6 +1,8 @@
 import { WidgetJsPlugin } from '@widget-js/vue3'
 import '@widget-js/vue3/dist/style.css'
 import '@/assets/main.css'
+import 'element-plus/theme-chalk/el-carousel.css'
+import 'element-plus/theme-chalk/el-carousel-item.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
