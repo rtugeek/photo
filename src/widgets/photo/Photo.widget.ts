@@ -22,9 +22,9 @@ const PhotoWidget = new Widget({
   categories: ['photo'],
   height: 2,
   minWidth: 1,
-  maxWidth: 6,
+  maxWidth: 8,
   minHeight: 1,
-  maxHeight: 6,
+  maxHeight: 8,
   configPagePath: '/widget/config/photo?width=600&height=400frame=true&transparent=false',
 })
 

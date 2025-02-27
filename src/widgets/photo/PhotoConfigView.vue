@@ -61,7 +61,7 @@ function save() {
         />
       </ElFormItem>
       <el-form-item label="轮播时间（秒）">
-        <el-input-number v-model="durationModel" :min="1" :max="1000" />
+        <el-input-number v-model="durationModel" :min="1" :max="86400" />
       </el-form-item>
       <el-form-item label="随机播放">
         <el-switch v-model="photoConfig.random" />
