@@ -8,16 +8,19 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  base: '/photo',
-  plugins: [vue(), widget(), AutoImport({
-    resolvers: [ElementPlusResolver()],
-  }), Components({
-    resolvers: [ElementPlusResolver()],
-  })],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+export default defineConfig((config) => {
+  const base = config.mode == 'offline' ? './' : '/photo'
+  return {
+    base,
+    plugins: [vue(), widget(), AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }), Components({
+      resolvers: [ElementPlusResolver()],
+    })],
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+      },
     },
-  },
+  }
 })

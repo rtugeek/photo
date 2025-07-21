@@ -1,0 +1,15 @@
+{
+  "fileMap": [
+    {
+      "src": "./dist/widget.json",
+      "dest": "/www/wwwroot/widgetjs.cn/photo/widget.json"
+    },
+    {
+      "pattern": "./dist/widget_*.zip",
+      "dest": "/www/wwwroot/widgetjs.cn/photo/widget.zip"
+    }
+  ],
+  "ftpConfig": {
+    "host": ["mine"]
+  }
+}

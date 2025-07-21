@@ -17,6 +17,7 @@
     "entry": "https://widgetjs.cn/photo",
     "base": "/photo"
   },
+  "zipUrl": "https://widgetjs.cn/photo/widget.zip",
   "hash": true,
   "url": "",
   "widgets": [

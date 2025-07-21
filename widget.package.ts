@@ -14,6 +14,7 @@ export default new WidgetPackage({
     entry: 'https://widgetjs.cn/photo',
     base: '/photo',
   },
+  zipUrl: 'https://widgetjs.cn/photo/widget.zip',
   name: 'widgetjs.cn.photo',
   title: {
     'zh-CN': '相册组件包',
